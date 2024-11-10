@@ -1,0 +1,144 @@
+# This file could be used for testing the API with Visual Studio Code
+
+## Execute Log In Normal User
+POST http://localhost:3001/api/sessions HTTP/1.1
+content-type: application/json
+
+{
+    "username": "user1@email.com",
+    "password": "password"
+}
+###
+
+## Checking if user is still logged-in.
+GET http://localhost:3001/api/sessions/current HTTP/1.1
+###
+
+## Execute Log Out.
+DELETE http://localhost:3001/api/sessions/current HTTP/1.1
+###
+
+## Retrieving all the pages
+GET http://localhost:3001/api/pages HTTP/1.1
+###
+
+## Retrieving a specific page specifing its ID {{$randomInt 1 6}}
+GET http://localhost:3001/api/pages/1 HTTP/1.1
+###
+
+## Execute Log In Mario_Rossi User
+POST http://localhost:3001/api/sessions HTTP/1.1
+content-type: application/json
+
+{
+    "username": "user1@email.com",
+    "password": "password"
+}
+###
+
+## Create a new page
+POST http://localhost:3001/api/pages HTTP/1.1
+content-type: application/json
+
+{
+    "title":"a",
+    "author":"Mario_Rossi",
+    "creationDate":"2023-06-24",
+    "publicationDate":"2023-06-24",
+    "blocks": {
+        "blocks": [
+            {
+            "type":"header",
+            "content":"Mock header"
+            },
+            {"type":"paragraph",
+            "content":"Mock paragraph"
+            }
+        ]
+    }
+}
+###
+
+{
+    "title": "prova3",
+    "author": "Mario_Rossi",
+    "creationDate": "2021-05-12",
+    "publicationDate": "2021-05-12",
+    "blocks": {
+        "blocks": [
+            {
+            "type": "header",
+            "content": "Header 4"
+            },
+            {
+            "type": "paragraph",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere orci eget est efficitur luctus. In lobortis gravida justo, eget vulputate metus consequat in. Nullam tempus ultricies risus. Nullam pretium arcu mi, ut tincidunt purus dapibus a. Maecenas varius malesuada efficitur. Quisque nec urna at metus tincidunt iaculis. Nulla id sollicitudin elit, eget efficitur urna. Maecenas bibendum sapien nec commodo feugiat. Proin dictum convallis dui non commodo. Nulla et leo magna."
+            },
+            {
+            "type": "image",
+            "content": "img4.png"
+            }
+        ]
+    }
+}
+###
+
+## Update a page
+PUT http://localhost:3001/api/pages/8 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Little Red Riding Hood",
+    "author": "Mario_Rossi",
+    "creationDate": "2021-05-12",
+    "publicationDate": "2021-05-12",
+    "blocks": {
+        "blocks": [
+            {
+            "type": "header",
+            "content": "Header 4"
+            },
+            {
+            "type": "paragraph",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere orci eget est efficitur luctus. In lobortis gravida justo, eget vulputate metus consequat in. Nullam tempus ultricies risus. Nullam pretium arcu mi, ut tincidunt purus dapibus a. Maecenas varius malesuada efficitur. Quisque nec urna at metus tincidunt iaculis. Nulla id sollicitudin elit, eget efficitur urna. Maecenas bibendum sapien nec commodo feugiat. Proin dictum convallis dui non commodo. Nulla et leo magna."
+            },
+            {
+            "type": "image",
+            "content": "img4.png"
+            }
+        ]
+    }
+}
+###
+
+## Execute Log In Admin User
+POST http://localhost:3001/api/sessions HTTP/1.1
+content-type: application/json
+
+{
+    "username": "admin@email.com",
+    "password": "password"
+}
+###
+
+## Update the website's name
+PUT http://localhost:3001/api/website/name HTTP/1.1
+content-type: application/json
+
+{
+    "name": "CMSmall"
+}
+###
+
+## ERR: Update the website's name with a void field
+PUT http://localhost:3001/api/website/name HTTP/1.1
+content-type: application/json
+
+{
+    "name": ""
+}
+###
+
+### Get all users' names
+GET http://localhost:3001/api/users HTTP/1.1
+###

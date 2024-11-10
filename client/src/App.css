@@ -1,0 +1,92 @@
+#root {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  zoom: 0.8;
+}
+
+/* Global */
+.vheight-100 {
+  min-height: 100vh;
+}
+
+/* Color Palette */
+.main-color{
+  background-color: #7cabf7;
+}
+
+.primary-color{
+  color: #007bff;
+}
+
+.muted-color{
+  background-color: #daecff;
+  border-color: #daecff;
+}
+
+.colored-button:hover {
+  color: #007bff;
+  background-color: #fff;
+}
+
+.add-block-button{
+  color: #000000;
+  background-color: #f8f8f8;
+  border-color: #cccccc;
+}
+
+.add-block-button:hover {
+  color: #ffffff;
+  background-color: #cccccc;
+  border-color: #cccccc;
+}
+
+.add-block-button:active{
+  color: #ffffff;
+  background-color: #cccccc;
+  border-color: #cccccc;
+} 
+
+
+/*
+ * NOTE: HTML collapses multiple withespaces into one, so "Hello      world!" becomes "Hello world!".
+ * If you want to keep them use white-space: pre-wrap;
+ */
+ .keep-white-space {
+  white-space: pre-wrap; 
+}
+
+/* Specifies the graphical appearence of the toast (used for the login). */
+.toast {
+  position: absolute;   /*Position it relative to the parent*/
+  bottom: 15px;
+  left: 15px;
+}
+
+/* Styles related to NavBar */
+
+.navbar-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.below-nav {
+  padding-top: 5rem;
+}
+
+.text-size{
+  font-size: 1.5rem;
+}
+
+/* Icons */
+.icon-size {
+  font-size: 1.5rem;
+}
+
+/* Adding padding to form */
+.form-padding {
+  padding: 2rem;
+}
+
+
