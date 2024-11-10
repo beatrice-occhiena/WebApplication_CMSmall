@@ -1,4 +1,4 @@
-CMSmall Web Application
+# CMSmall Web Application
 ## Student: s314971 OCCHIENA BEATRICE 
 
 ![Screenshot](./screenshot1.png)
