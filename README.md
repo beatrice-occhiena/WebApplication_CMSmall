@@ -1,6 +1,9 @@
 # Exam #1: "CMSmall"
 ## Student: s314971 OCCHIENA BEATRICE 
 
+![Screenshot](./screenshot1.png)
+![Screenshot](./screenshot2.png)
+
 ## React Client Application Routes
 
 - Route `/`: home page of the application (i.e. the front office), displays all the published pages ordered by publication date. It receives the *pages* and *setPages* props.
@@ -285,12 +288,6 @@
 - `Blocks`: used in the view page layout, it renders for each block of a page a different section based on the type of the block. For header blocks it displays a title (h5), for paragraph blocks a text (p) and for image blocks one of the four preloaded images.
 - `BlockForm`: used in the *PageForm*, it renders a form component for each block of the page. Depending on the type of block, a different kind of *BlockContent* is shown. On the bottom, it contains all the buttons necessary to delete or change the order of the block.
 - `BlockContent`: for header blocks it displays a text field, for paragraph block a wider text area field, and for image blocks a radio check selection in which each image is shown in a smaller size as the lable to be selected.
-
-
-## Screenshot
-
-![Screenshot](./screenshot1.png)
-![Screenshot](./screenshot2.png)
 
 ## Users Credentials
 
